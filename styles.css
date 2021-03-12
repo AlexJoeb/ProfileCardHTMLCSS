@@ -1,0 +1,171 @@
+:root {
+  --bg: #19a1ae;
+  --white: #fff;
+  --gray: #6b7082;
+  --bubble-offset: -20vw;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  height: 100vh;
+  width: 100vw;
+
+  background-color: var(--bg);
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* background-color: var(--bg);
+  background-image: url("/images/bg-pattern-top.svg"),
+    url("/images/bg-pattern-bottom.svg");
+  background-size: 622px 621px, 622px 621px;
+  background-position: top -483.97px left -538.47px, top 228.03px left 36.53px;
+  background-repeat: no-repeat; */
+
+  overflow: hidden;
+
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body::before {
+  content: "";
+  width: 622px;
+  height: 621px;
+
+  position: absolute;
+  display: inline;
+  z-index: 1;
+  top: -300px;
+  left: -410px;
+
+  background: url("/images/bg-pattern-top.svg") center center no-repeat;
+  background-size: contain;
+
+  opacity: 0.25;
+}
+
+body::after {
+  content: "";
+  width: 622px;
+  height: 621px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: -300px;
+  right: -410px;
+
+  background: url("/images/bg-pattern-top.svg") center center no-repeat;
+  background-size: contain;
+
+  opacity: 0.25;
+}
+
+/* Card */
+.card {
+  width: 90%;
+  max-width: 350px;
+  height: 374px;
+
+  background: var(--white);
+
+  border-radius: 15px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.card_top {
+  height: 140px;
+  width: 100%;
+  background: url("/images/bg-pattern-card.svg") center center no-repeat;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+}
+
+.profile_image {
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  width: 96px;
+  height: 96px;
+  border: 5px solid var(--white);
+  border-radius: 100%;
+  background: url("/images/image-victor.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.profile_image img {
+  display: none;
+}
+
+.card_bottom {
+  padding-top: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.125em;
+}
+
+.title .age {
+  font-weight: normal;
+  margin-left: 1em;
+  color: var(--gray);
+}
+
+.city {
+  margin-top: 7px;
+  font-size: 0.875em;
+  color: var(--gray);
+}
+
+.hr {
+  margin: 1.5em 0;
+  width: 100%;
+  height: 1px;
+  background: var(--gray);
+  opacity: 0.3;
+}
+
+.stats {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 228px;
+}
+
+.stats div p:first-of-type {
+  font-weight: bold;
+  font-size: 1.125em;
+}
+
+.stats div p:last-of-type {
+  font-size: 0.625em;
+  color: var(--gray);
+  letter-spacing: 1px;
+}
