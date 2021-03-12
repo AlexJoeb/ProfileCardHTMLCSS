@@ -79,6 +79,16 @@ body::after {
   opacity: 0.25;
 }
 
+@media only screen and (min-width: 1440px) {
+  body::before {
+    left: -150px;
+  }
+
+  body::after {
+    right: -200px;
+  }
+}
+
 /* Card */
 .card {
   width: 90%;
